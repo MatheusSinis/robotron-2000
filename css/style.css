@@ -29,6 +29,20 @@ main {
     gap: 1vw;
 }
 
+li{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding: 0.2em 0.5em;
+    border: 3px solid var(--main-cinza);
+    background: var(--main-branco);
+    cursor: pointer;
+}
+
+.li:hover {
+    background: var(--main-preto);
+    color: var(--main-branco)
+}
+
 .robotron {
     background: url(../img/estrutura.png) no-repeat;
     background-position: center center;
@@ -125,6 +139,40 @@ main {
     text-align: center;
     border: 3px solid var(--main-cinza);
     cursor: pointer;
+}
+
+.dropdown{
+    margin-top: 2em;
+    margin-right: 18em;
+}
+
+.dropdown-cor {
+    display: grid;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.2em 1em;
+    border: 3px solid var(--main-cinza);
+    background: var(--main-branco);
+    cursor: pointer;
+}
+
+.dropdown-cor:hover {
+    background: var(--main-preto);
+    color: var(--main-branco)
+}
+
+.dropdown-content{
+    margin-top: 0.05em;
+    grid-template-columns: repeat(2, 1fr);
+    display: none;
+    list-style: none;
+    padding-left: 0.03em;
+}
+
+.dropdown-element:hover {
+    background: var(--main-preto);
+    color: var(--main-branco)
 }
 
 .linha {

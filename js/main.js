@@ -60,3 +60,29 @@ ajuste.forEach((elemento) => {
         atualizaEstatisticas(evento.target.dataset.peca, evento.target.dataset.controle);
     });
 });
+
+let botao = document.querySelector("[data-botao]");
+let dropdown = document.querySelector("[data-lista]");
+
+botao.addEventListener("click", () => {
+    if(dropdown.style.display === "grid"){
+        dropdown.style.display = "none";
+    }else{
+        dropdown.style.display = "grid";
+    }
+});
+
+function mudaCor(cor){
+    let imagem = document.querySelector(".robo");
+    imagem.setAttribute("src", `img/Robotron 2000 - ${cor}/Robotron 2000 - ${cor}.png`);
+}
+
+const cores = document.querySelectorAll("[data-cor]");
+
+cores.forEach((elemento) => {
+    let cor = elemento.dataset.cor;
+    elemento.addEventListener("click", () =>{
+        let imagem = document.querySelector(".robo");
+        imagem.setAttribute("src", `img/Robotron 2000 - ${cor}/Robotron 2000 - ${cor}.png`);
+    });
+});
